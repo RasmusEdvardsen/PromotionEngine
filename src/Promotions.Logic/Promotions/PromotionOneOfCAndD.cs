@@ -11,7 +11,7 @@ namespace Promotions.Logic.Promotions
     {
         const int PromotionValue = 5;
 
-        public void Apply(Order order)
+        public void ApplyTo(Order order)
         {
             var c = order.Products
                 .FirstOrDefault(p => !p.HasBeenDiscounted && p.Sku == "C");

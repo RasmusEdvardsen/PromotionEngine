@@ -22,7 +22,7 @@ namespace Promotions.Logic.Test
             var oneOfCAndD = new PromotionOneOfCAndD();
 
             // act
-            oneOfCAndD.Apply(order);
+            oneOfCAndD.ApplyTo(order);
 
             // assert
             Assert.True(order.TotalDiscount == 0);
@@ -38,7 +38,7 @@ namespace Promotions.Logic.Test
             var oneOfCAndD = new PromotionOneOfCAndD();
 
             // act
-            oneOfCAndD.Apply(order);
+            oneOfCAndD.ApplyTo(order);
 
             // assert
             Assert.True(order.TotalDiscount == 5);
@@ -55,7 +55,7 @@ namespace Promotions.Logic.Test
             var oneOfCAndD = new PromotionOneOfCAndD();
 
             // act
-            oneOfCAndD.Apply(order);
+            oneOfCAndD.ApplyTo(order);
 
             // assert
             Assert.True(order.TotalDiscount == 5);

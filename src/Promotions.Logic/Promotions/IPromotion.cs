@@ -9,6 +9,6 @@ namespace Promotions.Logic.Promotions
 {
     public interface IPromotion
     {
-        public void Apply(Order order);
+        public void ApplyTo(Order order);
     }
 }

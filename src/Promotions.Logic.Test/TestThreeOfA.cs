@@ -22,7 +22,7 @@ namespace Promotions.Logic.Test
             var threeOfA = new PromotionThreeOfA();
 
             // act
-            threeOfA.Apply(order);
+            threeOfA.ApplyTo(order);
 
             // assert
             Assert.True(order.TotalDiscount == 0);
@@ -37,7 +37,7 @@ namespace Promotions.Logic.Test
             var threeOfA = new PromotionThreeOfA();
 
             // act
-            threeOfA.Apply(order);
+            threeOfA.ApplyTo(order);
 
             // assert
             Assert.True(order.TotalDiscount == 20);
@@ -53,7 +53,7 @@ namespace Promotions.Logic.Test
             var threeOfA = new PromotionThreeOfA();
 
             // act
-            threeOfA.Apply(order);
+            threeOfA.ApplyTo(order);
 
             // assert
             Assert.True(order.TotalDiscount == 20);

@@ -11,7 +11,7 @@ namespace Promotions.Logic.Promotions
     {
         const int PromotionValue = 20;
 
-        public void Apply(Order order)
+        public void ApplyTo(Order order)
         {
             var toDiscount = order.Products
                 .Where(p => !p.HasBeenDiscounted)

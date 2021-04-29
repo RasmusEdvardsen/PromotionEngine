@@ -28,7 +28,7 @@ namespace Promotions
 
             foreach (var promotion in _promotions)
             {
-                promotion.Apply(order);
+                promotion.ApplyTo(order);
             }
 
             Console.WriteLine($"Done! Total savings: {order.TotalDiscount}.");
