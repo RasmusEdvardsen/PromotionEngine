@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Promotions.Logic.Promotions;
+using System;
 
 namespace Promotions
 {
@@ -6,7 +8,17 @@ namespace Promotions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var collection = new ServiceCollection();
+
+            collection.AddScoped<IPromotion, PromotionThreeOfA>();
+            collection.AddScoped<IPromotion, PromotionTwoOfB>();
+            collection.AddScoped<IPromotion, PromotionOneOfCAndD>();
+            collection.AddSingleton<Runner>();
+
+            collection
+                .BuildServiceProvider()
+                .GetRequiredService<Runner>()
+                .Run();
         }
     }
 }
