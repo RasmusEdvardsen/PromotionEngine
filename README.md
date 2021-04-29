@@ -7,3 +7,4 @@
 ## Considerations
 * Product SKU/price should come from a Db
 * Product price is not necessary for calculating total discount
+* Promotions are ordered from most savings to least. This still does not guarantee the highest total savings, but should do well enough.
